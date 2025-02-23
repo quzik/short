@@ -7,7 +7,19 @@
 </head>
 <body>
   <h1>Short Flim By Economics Department</h1>
-  <iframe src="https://drive.google.com/file/d/1QoTm0icThMUvn-zqdE433Tnl1rBaLvIF/preview" width="640" height="480" allow="autoplay" allowfullscreen></iframe>
-  <iframe src="https://drive.google.com/file/d/1EySlhx4QYSjTWuwbp2SMMKjF9T54Ih4h/preview" width="640" height="480" allow="autoplay" allowfullscreen></iframe>
+  <iframe src="https://drive.google.com/file/d/1QoTm0icThMUvn-zqdE433Tnl1rBaLvIF/preview" width="640" height="480" allow="autoplay"></iframe>
+
+  <script>
+    // Create a new Worker instance
+    const worker = new Worker('worker.js');
+
+    // Send a message to the worker
+    worker.postMessage('Hello from main thread!');
+
+    // Receive a message from the worker
+    worker.onmessage = function(event) {
+      console.log('Message from worker:', event.data);
+    };
+  </script>
 </body>
 </html>
