@@ -3,13 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Google Drive Video</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Google Drive Video and Image</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    .video-container {
+      margin: 10px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    iframe {
+      width: 100%;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Short Flim By Economics Department</h1>
-  <iframe src="https://drive.google.com/file/d/1QoTm0icThMUvn-zqdE433Tnl1rBaLvIF/preview" width="640" height="480" allow="autoplay"></iframe>
 
-  <script>
+  <!-- Header Section -->
+  <header>
+    <h1>Short Flim By Economics Department. Thanks For All</h1>
+  </header>
+
+  <!-- Main Content Section -->
+  <div class="content">
+    
+    <!-- First Google Drive Video using iframe -->
+    <div class="video-container">
+      <iframe src="https://drive.google.com/file/d/1QoTm0icThMUvn-zqdE433Tnl1rBaLvIF/preview" width="640" height="480" allow="autoplay" allowfullscreen></iframe>
+    </div>
+
+    <!-- Second Google Drive Video using iframe -->
+    <div class="video-container">
+      <iframe src="https://drive.google.com/file/d/1EySlhx4QYSjTWuwbp2SMMKjF9T54Ih4h/preview" width="640" height="480" allow="autoplay" allowfullscreen></iframe>
+    </div>
+    
+  </div>
+
+</body>
+</html>
+
     // Create a new Worker instance
     const worker = new Worker('worker.js');
 
